@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- import bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        
+    <!-- import font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css" integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/regular.min.css" integrity="sha512-WidMaWaNmZqjk3gDE6KBFCoDpBz9stTsTZZTeocfq/eDNkLfpakEd7qR0bPejvy/x0iT0dvzIq4IirnBtVer5A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css" integrity="sha512-yDUXOUWwbHH4ggxueDnC5vJv4tmfySpVdIcN1LksGZi8W8EVZv4uKGrQc0pVf66zS7LDhFJM7Zdeow1sw1/8Jw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/svg-with-js.min.css" integrity="sha512-FTnGkh+EGoZdexd/sIZYeqkXFlcV3VSscCTBwzwXv1IEN5W7/zRLf6aUBVf2Ahdgx3h/h22HNzaoeBnYT6vDlA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/fontawesome.min.js" integrity="sha512-c41hNYfKMuxafVVmh5X3N/8DiGFFAV/tU2oeNk+upk/dfDAdcbx5FrjFOkFhe4MOLaKlujjkyR4Yn7vImrXjzQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/regular.min.js" integrity="sha512-RNA9D6w1BGWFIVSGkGBsEEgVxoGNu7mtLZ+QQvwvoZHJHyoK19FF5R4xeM4AmdzreiwRzu8r0Xs89kFrOPh2zw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/solid.min.js" integrity="sha512-apZ8JDL5kA1iqvafDdTymV4FWUlJd8022mh46oEMMd/LokNx9uVAzhHk5gRll+JBE6h0alB2Upd3m+ZDAofbaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="src/img/bd.png" type="image/svg-xml">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/style.css">
+    <script type="module" src="/src/Js/cadastro-produtos.js" defer></script>
+    <script type="module" src="/src/Js/listando-produtos.js" defer></script>
+    <title>Controle de Estoque - Inicio -</title>
+  </head>
+  <body id="body">
+    <!-- Estrutura abaixo para o cadastro de produtos -->
+    <main class="main">
+      <section class="cadastro" id="cadastro">
+        <div>
+          <h1>Cadastre o Material</h1>
+        </div>
+        <div class="input-group mb-3">
+          <label for="nome" class="input-group-text">*Nome do Produto:</label>            
+          <input type="text" name="nome" id="nome" class="form-control" aria-label="Sizingexample input" aria-describedby="inputGroup-sizing-sm" autocomplete="off">
+        </div>
+        <div class="input-group mb-3">
+          <label for="quantidade" class="input-group-text">*Quantidade:</label>            
+          <input type="number" name="quantidade" id="quantidade" class="form-control" aria-label="Sizingexample input" aria-describedby="inputGroup-sizing-sm" autocomplete="off">
+        </div>        
+        <div class="input-group mb-3">
+          <label for="preco" class="input-group-text">*Preço:</label>                
+          <span class="input-group-text">R$</span>
+          <input type="number" name="preco" id="preco" class="form-control" aria-label="Dollaramount (with dot and two decimal places)" autocomplete="off"> 
+        </div>
+        <button type="button" class="btn btn-success" id="btnSalvar" >Salvar</button>
+        <div id="div_msg">
+          <h5  id="msg_confirmacao"></h5>
+        </div>         
+      </section>  
+      <!-- Estrutura abaixo para o retorno de produtos cadastrados -->
+      <section class="produtos_listados" id="produtos_listados">
+        <table class="table table-success table-striped">
+          <thead>
+            <tr class="especificacoes">
+              <td>Nome</td>                  
+              <td>Quant</td>
+              <td>Preço</td>
+              <td></td>      
+              <td></td>                 
+            </tr>
+          </thead>
+          <tbody id="tbody_list">
+            <div class="spinner" id="spinner">
+              <div class="spinner-grow text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </div>                                   
+          </tbody>                
+        </table>                       
+      </section>
+      <!-- Popup de edicão do produto -->
+      <div class="background_popup">
+        <div class="popup">
+          <div class="fechar">
+            <button class="btns_action" id="fechar_popup">
+              <i class="fa-solid fa-xmark" style="color:#ff0000"></i>
+            </button>
+          </div>
+          <div>
+            <label>Nome do Produto:</label>
+            <input class="edit_nome" type="text">
+          </div>      
+          <div>
+            <label>Quantidade:</label>
+            <input class="edit_quant" type="number">
+          </div>
+          <div>
+            <label>Preço:</label>
+            <input class="edit_preco" type="number">
+          </div>
+          <div class="save">
+            <button class="btnSalvarEdi">Salvar</button>
+          </div>
+        </div>    
+      </div>      
+    </main>
+        
+    <!-- import bootstrap script  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+</html>
